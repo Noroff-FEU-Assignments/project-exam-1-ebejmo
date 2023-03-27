@@ -1,0 +1,9 @@
+:root {
+  --color-primary: #10532c; /* green */
+  --color-light-bg: #f7faf6; /* light-green */
+  --color-darker-bg: #bfbfbf; /* lightish-grey */
+  --color-error: #b60112; /* red */
+  --color-black: #000000; /* black */
+  --color-white: #ffffff; /* white */
+  --text: "Ubuntu";
+}
