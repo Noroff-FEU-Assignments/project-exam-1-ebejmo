@@ -1,0 +1,29 @@
+#checkBtn {
+  display: none;
+}
+#listing {
+  display: none;
+}
+/* #listing:nth-child(1) {
+  display: inline-block;
+} */
+.one {
+  display: block;
+}
+.two,
+.three {
+  display: none;
+}
+#checkBtn:checked ~ .two,
+.three {
+  display: block;
+}
+label {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+label:hover {
+  background-color: blanchedalmond;
+}

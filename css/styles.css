@@ -108,6 +108,17 @@ a {
   background-color: var(--color-white);
 }
 
+/* bread */
+
+.blog-top {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.bread a {
+  color: var(--color-black);
+}
+
 footer {
   background: var(--color-black);
   color: var(--color-white);

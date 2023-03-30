@@ -42,7 +42,6 @@ async function getHomeContent() {
             <h1>${data.title.rendered}</h1>
             <h2>${data.content.rendered}</h2>
         </div>
-        
     </div>
 `;
   } catch (error) {
