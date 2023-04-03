@@ -1,3 +1,33 @@
+@media (min-width: 500px) {
+  .blog-title {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-bar {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .posts-container {
+    padding: 0 12px;
+  }
+  .posts {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .posts-details {
+    width: 416px;
+  }
+  .blog-title {
+    justify-content: start;
+  }
+  .blog-search {
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 720px) {
   .hamburger {
     display: block;
@@ -11,7 +41,6 @@
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -23,12 +52,19 @@
     text-align: center;
     transition: 0.3s;
   }
-
   .nav-item {
     margin: 16px 0;
   }
-
   .nav-menu.active {
     left: 0;
+  }
+}
+
+@media (min-width: 850px) {
+  .posts-wrapper {
+    width: 100%;
+  }
+  .posts-details {
+    width: 546px;
   }
 }

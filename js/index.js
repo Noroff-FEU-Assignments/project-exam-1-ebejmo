@@ -1,7 +1,7 @@
 const heroContainer = document.querySelector(".hero");
 const blogContainer = document.querySelector(".blog");
 const baseUrl =
-  "https://e-bjm.no/threeput/wp-json/wp/v2/posts?_embed&per_page=12";
+  "https://e-bjm.no/threeput/wp-json/wp/v2/posts?_embed&per_page=15";
 const homeUrl = "https://e-bjm.no/threeput/wp-json/wp/v2/pages/30?_embed";
 
 async function getPosts() {

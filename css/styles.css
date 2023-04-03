@@ -86,7 +86,7 @@ a {
 }
 
 .nav-link {
-  transition: 0.7s ease;
+  transition: 0.6s ease;
 }
 
 .nav-link:hover {
@@ -113,6 +113,15 @@ a {
 .blog-top {
   max-width: 1000px;
   margin: 40px auto;
+  padding: 0 12px;
+}
+
+.blog-top span {
+  padding: 0 8px;
+}
+
+.bread {
+  margin-bottom: 20px;
 }
 
 .bread a {

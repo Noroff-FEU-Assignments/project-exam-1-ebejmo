@@ -14,8 +14,7 @@
 .three {
   display: none;
 }
-#checkBtn:checked ~ .two,
-.three {
+#checkBtn:checked ~ #listing {
   display: block;
 }
 label {

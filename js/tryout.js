@@ -1,5 +1,4 @@
-import { showPosts } from "./functions/showPosts.js";
-import { searchPost } from "./functions/searchPost.js";
+import { showPosts } from "./functions/tryoutPosts.js";
 
 const postsUrl =
   "https://e-bjm.no/threeput/wp-json/wp/v2/posts?_embed&per_page=15";
@@ -10,12 +9,14 @@ async function getPosts() {
     const blogs = await response.json();
 
     const cardLimit = blogs.length;
+    console.log(cardLimit);
+
     cardTotalElem.innerHTML = cardLimit;
+
     // console.log(results);
     // postContainer.innerHTML = "";
 
     showPosts(blogs);
-    searchPost(blogs);
   } catch (error) {
     console.log(error);
   }
@@ -23,28 +24,31 @@ async function getPosts() {
 
 getPosts();
 
-let showMoreButton = document.querySelector(".show-more");
-const cardTotalElem = document.querySelector(".posts-total");
+let loadMoreBtn = document.querySelector("#load-more");
+const cardCountElem = document.getElementById("card-count");
+const cardTotalElem = document.getElementById("card-total");
+
+// const cardLimit = blogs.length;
+// console.log(cardLimit);
 
 let currentItem = 10;
+console.log(currentItem);
 
-showMoreButton.onclick = () => {
-  let boxes = [
-    ...document.querySelectorAll(".blog-posts .posts-container .posts-wrapper"),
-  ];
-  // console.log(boxes);
+loadMoreBtn.onclick = () => {
+  let boxes = [...document.querySelectorAll(".container .box-container .box")];
+  console.log(boxes);
   for (let i = currentItem; i < currentItem + 2; i++) {
     // console.log(boxes[i]);
-    // console.log(currentItem);
+    console.log(currentItem);
     boxes[i].style.display = "flex";
-    // console.log(boxes.length);
+    console.log(boxes.length);
   }
   //   console.log(boxes[i]);
   //   console.log(boxes.length);
   currentItem += 2;
 
   if (currentItem >= boxes.length) {
-    showMoreButton.style.display = "none";
+    loadMoreBtn.style.display = "none";
+    console.log(boxes.length);
   }
-  console.log(boxes.length);
 };
