@@ -50,3 +50,17 @@ async function getHomeContent() {
 }
 
 getHomeContent();
+
+// function getHomeContent(){
+//   const response = fetch(homeUrl);
+//     const data =  response.json();
+
+//     heroContainer.innerHTML += `
+//     <div class="hero-img" style="background-image: url(${data._embedded["wp:featuredmedia"][0].source_url}">
+//         <div class="hero-content">
+//             <h1>${data.title.rendered}</h1>
+//             <h2>${data.content.rendered}</h2>
+//         </div>
+//     </div>
+// `;
+// }

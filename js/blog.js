@@ -26,25 +26,25 @@ getPosts();
 let showMoreButton = document.querySelector(".show-more");
 const cardTotalElem = document.querySelector(".posts-total");
 
-let currentItem = 10;
+let blogsShowing = 10;
 
-showMoreButton.onclick = () => {
+showMoreButton.addEventListener("click", function () {
   let boxes = [
     ...document.querySelectorAll(".blog-posts .posts-container .posts-wrapper"),
   ];
   // console.log(boxes);
-  for (let i = currentItem; i < currentItem + 2; i++) {
+  for (let i = blogsShowing; i < blogsShowing + 2; i++) {
     // console.log(boxes[i]);
-    // console.log(currentItem);
+    console.log(boxes);
     boxes[i].style.display = "flex";
     // console.log(boxes.length);
   }
   //   console.log(boxes[i]);
   //   console.log(boxes.length);
-  currentItem += 2;
+  blogsShowing += 2;
 
-  if (currentItem >= boxes.length) {
+  if (blogsShowing >= boxes.length) {
     showMoreButton.style.display = "none";
   }
   console.log(boxes.length);
-};
+});
