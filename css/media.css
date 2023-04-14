@@ -37,8 +37,31 @@
   }
 }
 
-@media (max-width: 720px) {
-  .hamburger {
+@media (min-width: 700px) {
+  .nav-logo {
+    min-width: 200px;
+  }
+  nav {
+    display: flex;
+    position: static;
+    text-align: right;
+  }
+  header {
+    justify-content: space-around;
+    align-items: center;
+  }
+  header label {
+    display: none;
+  }
+  nav li {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  ul {
+    background-color: inherit;
+  }
+
+  /* .hamburger {
     display: block;
   }
   .hamburger.active .bar:nth-child(2) {
@@ -66,7 +89,7 @@
   }
   .nav-menu.active {
     left: 0;
-  }
+  } */
 }
 
 @media (min-width: 850px) {

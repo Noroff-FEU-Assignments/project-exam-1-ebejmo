@@ -3,7 +3,7 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  /* position: relative; */
   max-width: 1400px;
   margin: 0 auto;
 }

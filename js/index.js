@@ -1,8 +1,10 @@
+import { displayError } from "./functions/errorMessage.js";
+
 const heroContainer = document.querySelector(".hero");
 const blogContainer = document.querySelector(".blog");
 const baseUrl =
   "https://e-bjm.no/threeput/wp-json/wp/v2/posts?_embed&per_page=15";
-const homeUrl = "https://e-bjm.no/threeput/wp-json/wp/v2/pages/30?_embed";
+const homeUrl = "https://e-bjm.no/threeput/wp-json/wp/v2/pages/30?_embedd";
 
 async function getPosts() {
   try {
@@ -46,6 +48,7 @@ async function getHomeContent() {
 `;
   } catch (error) {
     console.log(error);
+    displayError("error", error, ".container-e");
   }
 }
 
