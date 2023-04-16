@@ -1,3 +1,5 @@
+import { displayHtml } from "./functions/displayHtml.js";
+
 const form = document.querySelector(".contact-form");
 
 const fullName = document.querySelector(".full-name");
@@ -18,31 +20,15 @@ function formValidation(event) {
     fullName.style.border = "1px solid green";
   } else {
     nameError.style.display = "block";
-    address.style.border = "1px solid darkred";
+    fullName.style.border = "1px solid #b60112";
   }
-
-  if (emailValidation(email.value)) {
-    emailError.style.display = "none";
-    email.style.border = "1px solid green";
-  } else {
-    emailError.style.display = "block";
-    email.style.border = "1px solid darkred";
-  }
-
-  //   if (minLength(address.value, 4)) {
-  //     addressError.style.display = "none";
-  //     address.style.border = "1px solid green";
-  //   } else {
-  //     addressError.style.display = "block";
-  //     address.style.border = "1px solid darkred";
-  //   }
 
   if (minLength(subject.value, 14)) {
     subjectError.style.display = "none";
     subject.style.border = "1px solid green";
   } else {
     subjectError.style.display = "block";
-    subject.style.border = "1px solid darkred";
+    subject.style.border = "1px solid #b60112";
   }
 
   if (minLength(message.value, 24)) {
@@ -50,16 +36,17 @@ function formValidation(event) {
     message.style.border = "1px solid green";
   } else {
     messageError.style.display = "block";
-    message.style.border = "1px solid darkred";
+    message.style.border = "1px solid #b60112";
   }
 
-  //   if (emailValidation(email.value)) {
-  //     emailError.style.display = "none";
-  //     email.style.border = "1px solid green";
-  //   } else {
-  //     emailError.style.display = "block";
-  //     email.style.border = "1px solid darkred";
-  //   }
+  if (emailValidation(email.value)) {
+    emailError.style.display = "none";
+    email.style.border = "1px solid green";
+  } else {
+    emailError.style.display = "block";
+    email.style.border = "1px solid #b60112";
+  }
+
   function submitForm() {
     if (
       minLength(fullName.value, 4) &&
@@ -92,3 +79,5 @@ function emailValidation(email) {
 }
 
 form.addEventListener("submit", formValidation);
+
+setTimeout(displayHtml, 2000);

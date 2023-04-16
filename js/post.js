@@ -1,3 +1,5 @@
+import { displayHtml } from "./functions/displayHtml.js";
+import { displayError } from "./functions/errorMessage.js";
 import { createBlogPost } from "./functions/createBlogPost.js";
 
 const queryString = document.location.search;
@@ -17,7 +19,9 @@ async function getBlogPost() {
     createBlogPost(details);
   } catch (error) {
     console.log(error);
+    displayError("error", ".html");
   }
 }
 
+setTimeout(displayHtml, 2000);
 getBlogPost();

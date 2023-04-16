@@ -28,7 +28,11 @@
         </nav>
       </div>
     </header>
-    <main>
+    <div class="loader">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <main class="html">
       <section>
         <div class="blog-top">
           <div class="bread">
@@ -71,10 +75,10 @@
               Please enter your subject. Minimum of 15 characters.
             </div>
           </div>
-          <div class="form-wrapper form-wrapper-mess">
+          <div class="form-wrapper">
             <label>
               Message
-              <input name="message" class="message" />
+              <textarea name="message" class="message"></textarea>
             </label>
             <div class="form-error" id="mess-error">
               Please enter your Message. Minimum of 25 characters.

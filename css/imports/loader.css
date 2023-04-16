@@ -1,0 +1,34 @@
+.loader {
+  height: 60px;
+  margin: 200px;
+  transform-origin: bottom center;
+  animation: rotate 2.8s linear infinite;
+}
+
+.circle {
+  display: inline-block;
+  background-color: var(--color-primary);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: grow 1.5s linear infinite;
+  margin: -5px;
+}
+
+.circle:nth-child(2) {
+  background-color: var(--color-darker-bg);
+  animation-delay: 0.8s;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  50% {
+    transform: scale(1);
+  }
+}

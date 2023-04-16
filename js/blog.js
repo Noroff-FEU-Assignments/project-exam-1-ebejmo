@@ -1,5 +1,7 @@
 import { showPosts } from "./functions/showPosts.js";
 import { searchPost } from "./functions/searchPost.js";
+import { displayHtml } from "./functions/displayHtml.js";
+import { displayError } from "./functions/errorMessage.js";
 
 const postsUrl =
   "https://e-bjm.no/threeput/wp-json/wp/v2/posts?_embed&per_page=15";
@@ -18,13 +20,16 @@ async function getPosts() {
     searchPost(blogs);
   } catch (error) {
     console.log(error);
+    displayError("error", error, ".html");
   }
 }
 
+setTimeout(displayHtml, 2000);
 getPosts();
 
 let showMoreButton = document.querySelector(".show-more");
 const cardTotalElem = document.querySelector(".posts-total");
+const totalShow = document.querySelector(".none");
 
 let blogsShowing = 10;
 
@@ -45,6 +50,7 @@ showMoreButton.addEventListener("click", function () {
 
   if (blogsShowing >= boxes.length) {
     showMoreButton.style.display = "none";
+    totalShow.style.display = "block";
   }
   console.log(boxes.length);
 });

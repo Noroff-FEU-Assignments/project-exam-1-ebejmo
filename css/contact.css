@@ -16,7 +16,8 @@ main {
   margin-bottom: 20px;
 }
 
-.form-wrapper input {
+.form-wrapper input,
+textarea {
   display: block;
   height: 36px;
   width: 90%;
@@ -25,7 +26,7 @@ main {
   margin: 4px 0;
 }
 
-.form-wrapper-mess input {
+textarea {
   height: 100px;
 }
 
@@ -37,17 +38,12 @@ main {
 
 .form-btn {
   width: 90%;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border: none;
-  height: 42px;
-  text-transform: uppercase;
-  font-size: 18px;
   margin: 20px 0;
 }
 
 .form-btn:hover {
-  cursor: pointer;
+  background-color: #08391d;
+  transition: 0.4s;
 }
 
 .success {
