@@ -202,3 +202,122 @@ ul {
   border-color: crimson;
   color: #fff;
 }
+
+/* working on the carousel baby */
+.carro-bg {
+  background-color: var(--color-light-bg);
+  padding: 100px 0;
+  /* overflow: hidden;
+  position: relative; */
+}
+
+.posts-carousel {
+  /* width: 100%; */
+  overflow: hidden;
+  scroll-behavior: smooth;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.posts-carousel h2 {
+  margin-bottom: 30px;
+  padding-left: 12px;
+}
+
+.carro-container {
+  /* display: flex;
+  justify-content: space-evenly; */
+  height: calc(100vh - 2rem);
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.carro {
+  /* max-width: 313px;
+  margin: 10px;
+  text-align: center;
+  background-color: var(--color-white); */
+  width: 100%;
+
+  height: 100%;
+
+  flex: 1 0 100%;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 10px;
+}
+/* 
+.carro h3 {
+  font-size: 18px;
+  color: var(--color-black);
+  margin: 16px 0;
+}
+
+.carro-img {
+  height: 300px;
+  overflow: hidden;
+}
+
+.carro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.carro:hover img {
+  transform: scale(1.02);
+}
+
+/* .prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
+} */
+
+.slide-btn {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50px;
+  background-color: inherit;
+  font-size: 50px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 100ms;
+}
+
+.slide-btn:hover,
+.slide-btn:focus {
+  opacity: 1;
+}
+
+#prev-btn {
+  left: 0;
+  margin-left: 12px;
+}
+
+#next-btn {
+  right: 0;
+  margin-right: 12px;
+}
+
+/* try */

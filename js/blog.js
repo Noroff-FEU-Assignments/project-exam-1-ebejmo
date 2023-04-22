@@ -20,7 +20,7 @@ async function getPosts() {
     searchPost(blogs);
   } catch (error) {
     console.log(error);
-    displayError("error", error, ".html");
+    displayError("error", ".html");
   }
 }
 

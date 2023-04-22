@@ -1,40 +1,48 @@
-export function showPosts(postsToDisplay) {
-  const boxContainer = document.querySelector(".box-container");
+// export function tryPosts(postsToDisplay) {
+//   const postContainer = document.querySelector(".posts-container");
+//   postContainer.innerHTML = "";
 
-  postsToDisplay.forEach((posts) => {
-    boxContainer.innerHTML += `
+//   postsToDisplay.forEach((posts) => {
+//     postContainer.innerHTML += `
+//             <a href="post.html?id=${posts.id}" class="posts">
+//                 <div class="posts-img">
+//                 <img src=${posts._embedded["wp:featuredmedia"][0].source_url}
+//                 alt=${posts._embedded["wp:featuredmedia"][0].alt_text}>
+//                 </div>
+//             </a>`;
+//   });
+// }
 
+// ai chat
+export function tryPosts(postsToDisplay) {
+  const postContainer = document.querySelector(".carro-container");
 
-      <div class="box">
-      <a href="post.html?id=${posts.id}" class="">
-        <div class="image">
-        <img src=${posts._embedded["wp:featuredmedia"][0].source_url}
-        </div>
+  postContainer.innerHTML = "";
 
-        <div class="content">
-        <h3>${posts.title.rendered}</h3>
-        </div>
-      </a>  
-      </div
-    `;
-    // console.log(posts._embedded["wp:featuredmedia"][0].alt_text);
+  postsToDisplay.forEach((post) => {
+    postContainer.innerHTML += `
+        <a href="post.html?id=${post.id}" class="carro">
+          <div class="carro-img">
+            <img src=${post._embedded["wp:featuredmedia"][0].source_url} alt="${post._embedded["wp:featuredmedia"][0].alt_text}">
+          </div>
+          <div class="carro-title">
+          <h3>${post.title.rendered}</h3>
+          </div>
+        </a>`;
+  });
+  const slide = document.querySelector(".carro");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+
+  nextBtn.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+
+    postContainer.scrollLeft += slideWidth;
+  });
+
+  prevBtn.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+
+    postContainer.scrollLeft -= slideWidth;
   });
 }
-
-// let loadMoreBtn = document.querySelector("#load-more");
-
-// let currentItem = 3;
-
-// loadMoreBtn.onclick = () => {
-//   let boxes = [...document.querySelectorAll(".container .box-container .box")];
-
-//   for (var i = currentItem; i < currentItem + 3; i++) {
-//     boxes[i].style.display = "inline-block";
-//   }
-
-//   currentItem += i;
-
-//   if (currentItem >= boxes.length) {
-//     loadMoreBtn.style.display = "none";
-//   }
-// };
