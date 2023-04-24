@@ -1,5 +1,5 @@
 .hero-img {
-  height: 40vh;
+  height: 60vh;
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,4 +28,104 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+/* working on the carousel baby */
+.carro-bg {
+  background-color: var(--color-light-bg);
+  padding: 60px 0;
+  position: relative;
+}
+
+.posts-carousel {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  max-width: 1000px;
+  margin: 0 12px;
+}
+
+.posts-carousel h2 {
+  margin-bottom: 30px;
+  padding-left: 12px;
+}
+
+.carro-container {
+  height: 470px;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+
+.carro {
+  width: 100%;
+  height: 412px;
+  flex: 1 0 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 10px;
+}
+
+.carro-title {
+  text-align: center;
+}
+
+.carro h3 {
+  font-size: 18px;
+  color: var(--color-black);
+  margin: 16px 0 20px 0;
+}
+
+.carro-img {
+  overflow: hidden;
+}
+
+.carro-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.carro:hover img {
+  transform: scale(1.02);
+}
+
+.slide-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 32px;
+  border: none;
+  padding: 0;
+  opacity: 0.5;
+  transition: opacity 100ms;
+}
+
+.slide-btn:hover,
+.slide-btn:focus {
+  opacity: 1;
+}
+
+#prev-btn,
+#next-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prev-btn {
+  left: 0;
+  margin-left: 12px;
+}
+
+#next-btn {
+  right: 0;
+  margin-right: 12px;
 }

@@ -79,5 +79,4 @@ function emailValidation(email) {
 }
 
 form.addEventListener("submit", formValidation);
-
 setTimeout(displayHtml, 2000);
