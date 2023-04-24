@@ -3,14 +3,7 @@ export function createBlogPost(content) {
 
   const myDate = content.modified_gmt;
   const date = new Date(myDate);
-  console.log(
-    // date.getFullYear() + " " + date.getDate() + " " + date.getMonth()
-    date.toISOString()
-  );
-
-  // console.log(content.content.rendered);
-  // console.log(content._embedded);
-  // console.log(content._embedded["wp:featuredmedia"][0].alt_text);
+  console.log(date.toISOString());
 
   document.title = content.title.rendered + " | Three put...";
   contentContainer.innerHTML = `<div class="blog-top blog-top-specific">
@@ -37,11 +30,6 @@ export function createBlogPost(content) {
   <div class="blog-post-content">
     <p>${content.content.rendered}</p>
   </div>`;
-
-  // const postImg = document.querySelector(".blog-post-img");
-  // postImg.addEventListener("click", function () {
-  //   postImg.classList.toggle("expanded");
-  // });
   const postImg = document.querySelector(".blog-post-img");
   const popup = document.querySelector(".popup");
   const popupImg = document.querySelector(".popup-image");
@@ -52,31 +40,10 @@ export function createBlogPost(content) {
     console.log(this.src);
   });
 
-  // postImg.onclick = () => {
-  //   popup.style.display = "block";
-  //   popupImg.src = this.src;
-  // };
-
-  // popup.onclick = (event) => {
-  //   if (event.target === this) {
-  //     console.log(event);
-  //     this.style.display = "none";
-  //   }
-  // };
   popup.addEventListener("click", function (event) {
     if (event.target === this) {
       console.log(event);
       this.style.display = "none";
     }
   });
-
-  // postImg.addEventListener("click", function () {
-  //   postImg.classList.add("blog-post-img-expand");
-  // });
-
-  // document.addEventListener("click", function (event) {
-  //   if (!postImg.contains(event.target)) {
-  //     postImg.classList.remove("blog-post-img-expand");
-  //   }
-  // });
 }
