@@ -7,7 +7,7 @@ export function searchPost(posts) {
     console.log(value);
 
     const filteredPosts = posts.filter((post) => {
-      if (post.name.toLowerCase().startsWith(value)) {
+      if (post.title.rendered.toLowerCase().startsWith(value)) {
         return true;
       }
     });
