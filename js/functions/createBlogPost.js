@@ -2,8 +2,18 @@ export function createBlogPost(content) {
   const contentContainer = document.querySelector(".content-container");
 
   const myDate = content.modified_gmt;
-  const date = new Date(myDate);
-  console.log(date.toISOString());
+  console.log(myDate);
+  const dateTime = new Date(myDate);
+
+  const options = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  };
+  // for swedish format
+  // const dateString = dateTime.toLocaleDateString("sv-SE", options);
+  const dateString = dateTime.toLocaleDateString("en-US", options);
 
   document.title = content.title.rendered + " | Three put...";
   contentContainer.innerHTML = `<div class="blog-top blog-top-specific">
@@ -15,8 +25,8 @@ export function createBlogPost(content) {
     <a href="#" class="bread-active">Post</a>
     </div>
   <h1>${content.title.rendered}</h1>
-  <p class="blog-post-date">${date}</p>
-  <p>${content._embedded.author[0].name}
+  <p class="blog-post-date">${dateString}</p>
+  <p>Written by: ${content._embedded.author[0].name}
   </div>
   
   <div class="posts-img">
