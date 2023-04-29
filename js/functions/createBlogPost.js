@@ -13,6 +13,7 @@ export function createBlogPost(content) {
   };
   // for swedish format
   // const dateString = dateTime.toLocaleDateString("sv-SE", options);
+  // us format
   const dateString = dateTime.toLocaleDateString("en-US", options);
 
   document.title = content.title.rendered + " | Three put...";
@@ -26,7 +27,7 @@ export function createBlogPost(content) {
     </div>
   <h1>${content.title.rendered}</h1>
   <p class="blog-post-date">${dateString}</p>
-  <p>Written by: ${content._embedded.author[0].name}
+  <p>Posted by: ${content._embedded.author[0].name}
   </div>
   
   <div class="posts-img">
