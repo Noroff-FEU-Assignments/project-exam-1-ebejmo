@@ -17,6 +17,8 @@ async function getHomeAndCarouselContent() {
     const postsResponse = await fetch(postsUrl);
     const blogs = await postsResponse.json();
 
+    document.title =
+      homeData.title.rendered + " | Three put..." + homeData.slug;
     heroContainer.innerHTML += `
       <div class="hero-img" style="background-image: url(${homeData._embedded["wp:featuredmedia"][0].source_url}">
           <div class="hero-content">
