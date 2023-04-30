@@ -2,6 +2,10 @@ main {
   margin-bottom: 100px;
 }
 
+.blog-title h2 {
+  margin-top: 20px;
+}
+
 .contact-form {
   max-width: 600px;
   margin: auto;

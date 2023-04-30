@@ -1,5 +1,6 @@
 import { displayHtml } from "./functions/displayHtml.js";
 
+document.title = "Contact | Three put...";
 const form = document.querySelector(".contact-form");
 
 const fullName = document.querySelector(".full-name");

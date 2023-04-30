@@ -17,6 +17,8 @@ async function getPosts() {
     const response = await fetch(postsUrl);
     const blogs = await response.json();
 
+    document.title = "Blog | Three put...";
+
     const numberOfBlogs = blogs.length;
     postsTotalElem.innerHTML = numberOfBlogs;
     console.log(numberOfBlogs);
@@ -42,6 +44,7 @@ showMoreButton.addEventListener("click", function () {
   // so the code doesnt break with uneven number
   for (let i = startShow; i < startShow + 2 && i < postsHolder.length; i++) {
     postsHolder[i].style.display = "flex";
+    console.log(postsHolder[i]);
   }
   startShow += 2;
 
