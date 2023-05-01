@@ -14,7 +14,7 @@ async function getAbout() {
     aboutContainer.innerHTML += `
     <div class="blog-top blog-top-specific">
         <div class="bread">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="non-active">Home</a>
         <span>></span>
         <a href="#" class="bread-active">About</a>
         </div>

@@ -54,6 +54,13 @@
   overflow: scroll;
   scroll-behavior: smooth;
   gap: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carro-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .carro {

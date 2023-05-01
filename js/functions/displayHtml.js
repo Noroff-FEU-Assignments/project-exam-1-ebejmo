@@ -9,5 +9,6 @@ export function displayHtml() {
   html.style.display = "inline";
   html.style.opacity = 1;
 
+  // set the body to align normal after loader is completed
   body.style.alignItems = "normal";
 }

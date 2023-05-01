@@ -17,17 +17,18 @@ export function createBlogPost(content) {
   const dateString = dateTime.toLocaleDateString("en-US", options);
 
   document.title = content.title.rendered + " | Three put...";
-  contentContainer.innerHTML = `<div class="blog-top blog-top-specific">
-  <div class="bread">
-    <a href="index.html">Home</a>
-    <span>></span>
-    <a href="blog.html" class="">Blog</a>
-    <span>></span>
-    <a href="#" class="bread-active">Post</a>
+  contentContainer.innerHTML = `
+  <div class="blog-top blog-top-specific">
+    <div class="bread">
+      <a href="index.html" class="non-active">Home</a>
+      <span>></span>
+      <a href="blog.html" class="non-active">Blog</a>
+      <span>></span>
+      <a href="#" class="bread-active">Post</a>
     </div>
-  <h1>${content.title.rendered}</h1>
-  <p class="blog-post-date">${dateString}</p>
-  <p>Posted by: ${content._embedded.author[0].name}
+    <h1>${content.title.rendered}</h1>
+    <p class="blog-post-date">${dateString}</p>
+    <p>Posted by: ${content._embedded.author[0].name}
   </div>
   
   <div class="posts-img">
@@ -41,19 +42,25 @@ export function createBlogPost(content) {
   <div class="blog-post-content">
     <p>${content.content.rendered}</p>
   </div>`;
+
   const postImg = document.querySelector(".blog-post-img");
   const popup = document.querySelector(".popup");
   const popupImg = document.querySelector(".popup-image");
 
+  // display the popup img on click
   postImg.addEventListener("click", function () {
-    popup.style.display = "block";
+    // on click show popup
+    popup.style.display = "flex";
+    // same img the in popup as being clicked
     popupImg.src = this.src;
-    console.log(this.src);
   });
 
+  // hide the popup on click
   popup.addEventListener("click", function (event) {
+    // check if the clicked event same as popup and done on the background and not on child
+    // if click is done on child eventlistener do not execute
     if (event.target === this) {
-      console.log(event);
+      // sets the popup to display none and hides it from view
       this.style.display = "none";
     }
   });
