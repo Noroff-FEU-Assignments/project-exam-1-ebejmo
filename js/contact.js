@@ -55,7 +55,7 @@ function formValidation(event) {
       minLength(message.value, 24) &&
       emailValidation(email.value)
     ) {
-      successMessage.innerHTML = `<div class="success">Message recievied, you will here from us shortly.</div>`;
+      successMessage.innerHTML = `<div class="success">Your message is received. I am out playing golf right now but you will hear from me shortly.</div>`;
       successMessage.style.display = "block";
       form.reset();
     } else {

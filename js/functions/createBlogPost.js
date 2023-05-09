@@ -16,6 +16,15 @@ export function createBlogPost(content) {
   // us format
   const dateString = dateTime.toLocaleDateString("en-US", options);
 
+  const metaTag = document.createElement("meta");
+  metaTag.setAttribute("name", "description");
+  metaTag.setAttribute("content", `${content.excerpt.rendered}`);
+  const head = document.querySelector("head");
+  console.log(head);
+  head.appendChild(metaTag);
+  console.log(metaTag);
+  console.log("Title:", content.title.rendered);
+
   document.title = content.title.rendered + " | Three put...";
   contentContainer.innerHTML = `
   <div class="blog-top blog-top-specific">

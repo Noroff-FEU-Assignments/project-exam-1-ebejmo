@@ -41,14 +41,13 @@ showMoreButton.addEventListener("click", function () {
   let postsHolder = [
     ...document.querySelectorAll(".blog-posts .posts-container .posts-wrapper"),
   ];
-  // so the code doesnt break with uneven number
+  // so the code doesnt break with uneven number of blogs
   for (let i = startShow; i < startShow + 2 && i < postsHolder.length; i++) {
     postsHolder[i].style.display = "flex";
-    console.log(postsHolder[i]);
   }
   startShow += 2;
 
-  // update the number of postsHolder showing
+  // update the number of postsHolder (blog/posts) showing
   postShowing.innerHTML = startShow;
 
   if (startShow >= postsHolder.length) {
