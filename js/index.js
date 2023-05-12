@@ -1,4 +1,4 @@
-// NEW SHIT
+// NEW
 import { carousel } from "./functions/carousel.js";
 import { displayHtml } from "./functions/displayHtml.js";
 import { displayError } from "./functions/errorMessage.js";

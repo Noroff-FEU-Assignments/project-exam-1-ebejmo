@@ -92,6 +92,10 @@ ul {
   transition: 0.4s ease;
 }
 
+/* ??? .fas.fa-bars:focus {
+  border: 2px solid black;
+} */
+
 #ham-menu:checked ~ nav {
   display: block;
 }

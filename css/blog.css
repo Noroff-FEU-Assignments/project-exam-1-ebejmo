@@ -6,11 +6,20 @@
   margin: 10px 0;
 }
 
+.blog-search {
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 300;
+}
+
 .search-bar {
+  display: block;
   height: 36px;
   width: 240px;
   padding: 0 6px;
-  margin-top: 20px;
+  margin-top: 6px;
 }
 
 .blog-posts {
