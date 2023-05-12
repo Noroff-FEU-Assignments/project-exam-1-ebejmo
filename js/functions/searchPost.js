@@ -1,6 +1,6 @@
 import { showPosts } from "./showPosts.js";
 
-// exact same search function as previous projects. remove because of bugs?
+// same search function as previous projects. remove because of bugs or fix bugs?
 export function searchPost(posts) {
   const searchBar = document.querySelector(".search-bar");
   searchBar.onkeyup = function () {

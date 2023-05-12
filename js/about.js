@@ -36,6 +36,7 @@ async function getAbout() {
     const popup = document.querySelector(".popup");
     const popupImg = document.querySelector(".popup-image");
 
+    // same functions as in createBlogPost
     postImg.addEventListener("click", function () {
       popup.style.display = "block";
       popupImg.src = this.src;

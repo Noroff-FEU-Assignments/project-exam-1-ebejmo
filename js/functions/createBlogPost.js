@@ -1,10 +1,13 @@
 export function createBlogPost(content) {
-  const contentContainer = document.querySelector(".content-container");
+  const head = document.querySelector("head");
+
+  const metaTag = document.createElement("meta");
+  metaTag.setAttribute("name", "description");
+  metaTag.setAttribute("content", `${content.title.rendered}`);
+  head.appendChild(metaTag);
 
   const myDate = content.modified_gmt;
-  console.log(myDate);
   const dateTime = new Date(myDate);
-
   const options = {
     weekday: "long",
     month: "long",
@@ -16,14 +19,7 @@ export function createBlogPost(content) {
   // us format
   const dateString = dateTime.toLocaleDateString("en-US", options);
 
-  const metaTag = document.createElement("meta");
-  metaTag.setAttribute("name", "description");
-  metaTag.setAttribute("content", `${content.excerpt.rendered}`);
-  const head = document.querySelector("head");
-  console.log(head);
-  head.appendChild(metaTag);
-  console.log(metaTag);
-  console.log("Title:", content.title.rendered);
+  const contentContainer = document.querySelector(".content-container");
 
   document.title = content.title.rendered + " | Three put...";
   contentContainer.innerHTML = `
@@ -67,7 +63,7 @@ export function createBlogPost(content) {
   // hide the popup on click
   popup.addEventListener("click", function (event) {
     // check if the clicked event same as popup and done on the background and not on child
-    // if click is done on child eventlistener do not execute
+    // if click is done on child do not execute code
     if (event.target === this) {
       // sets the popup to display none and hides it from view
       this.style.display = "none";

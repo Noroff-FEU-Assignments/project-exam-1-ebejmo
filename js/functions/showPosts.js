@@ -18,7 +18,5 @@ export function showPosts(postsToDisplay) {
               </div>
           </a>
         </div>`;
-    // console.log(posts._embedded["wp:featuredmedia"][0].alt_text);
-    // console.log(posts.content.rendered);
   });
 }

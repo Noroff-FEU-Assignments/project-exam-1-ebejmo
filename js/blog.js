@@ -17,11 +17,10 @@ async function getPosts() {
     const response = await fetch(postsUrl);
     const blogs = await response.json();
 
-    document.title = "Blog | Three put...";
-
     const numberOfBlogs = blogs.length;
     postsTotalElem.innerHTML = numberOfBlogs;
-    console.log(numberOfBlogs);
+
+    document.title = "Blog | Three put...";
 
     showPosts(blogs);
     searchPost(blogs);
