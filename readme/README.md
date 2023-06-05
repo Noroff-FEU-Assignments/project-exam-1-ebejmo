@@ -1,4 +1,4 @@
-#Project Exam 1
+# Project Exam 1
 
 ![image](https://github.com/Noroff-FEU-Assignments/project-exam-1-ebejmo/blob/main/tp-img.jpg)
 
@@ -14,20 +14,20 @@ The task was creating a blog site. Design and topics covered on the blog was cho
 -	Blog post specific pages
 -	Contact page
 
-### Home Page
+#### Home Page
 The home page has a ‘Latest Posts’ section which uses a carousel for users to click to view more posts. By default, on bigger screen sizes, the user can see three posts, then they can click an arrow on the right to view the next three posts, and click it again to view the next three posts. The user can also click back to view results they had previously seen. On mobile/smaller screen sizes the user sees one post. Clicking the right arrow shows the next post until the end has been reached of the carousel.
 
-### Blog Page
+#### Blog Page
 
 The blog posts page shows the first 10 blogs, the user can click to show more button which then shows more blog posts.
 
-### Blog Specific Page
+#### Blog Specific Page
 
 The content of the blog specific page is dynamically built using a query string parameter based on whatever link the user has clicked. The title of the blog specific page change based on the blog that has been clicked.
 
 If images on the blog post page are clicked, a modal appears giving the user a bigger view of that image. Clicking outside the image hides the modal.
 
-### Contact page
+#### Contact page
 
 There are 4 textboxes on this page.
 -	Name (Should be more than 5 characters long)
@@ -44,21 +44,16 @@ The content for this website is stored on a WordPress installation used as a Hea
 -	CSS
 -	JavaScript
 
-## Getting Started
-
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+Clone the repo, open it with Visual Studio Code and run it with Live Server.
 
-1. Clone the repo:
+Link to the Site: (https://e-bjm.no/threeput/wp-json/)
+Link to the API: (https://e-bjm.no/threeput/wp-json/)
 
-```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
-```
 
 
 ## Contact
-
 
 [My Twitter page](www.twitter.com)
 
