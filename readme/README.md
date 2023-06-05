@@ -48,7 +48,8 @@ The content for this website is stored on a WordPress installation used as a Hea
 
 Clone the repo, open it with Visual Studio Code and run it with Live Server.
 
-Link to the Site: (https://e-bjm.no/threeput/wp-json/)
+Link to the Site: (https://e-bjm.no/threeput/wp-json/)  
+
 Link to the API: (https://e-bjm.no/threeput/wp-json/)
 
 
