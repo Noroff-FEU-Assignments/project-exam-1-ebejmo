@@ -44,7 +44,7 @@ The content for this website is stored on a WordPress installation used as a Hea
 -	CSS
 -	JavaScript
 
-### Installing
+## Installing
 
 Clone the repo, open it with Visual Studio Code and run it with Live Server.
 
@@ -55,8 +55,7 @@ Link to the API: (https://e-bjm.no/threeput/wp-json/)
 
 ## Contact
 
-[My Twitter page](www.twitter.com)
 
-[My LinkedIn page](www.linkedin.com)
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/ebejmo)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/emil-bejmo-032854148/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://twitter.com/emilbejmo)  
 
 
