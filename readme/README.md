@@ -1,6 +1,6 @@
 # Your project title
 
-![image](https://github.com/ebejmo/ebejmo/blob/main/github-banner.png)
+![image]https://github.com/Noroff-FEU-Assignments/project-exam-1-ebejmo/blob/main/tp-img.jpg
 
 A simple overview of the use/purpose of the project.
 
