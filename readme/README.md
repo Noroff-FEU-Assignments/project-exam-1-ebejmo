@@ -1,4 +1,4 @@
-# Your project title
+Three Put...
 
 ![image](https://github.com/Noroff-FEU-Assignments/project-exam-1-ebejmo/blob/main/tp-img.jpg)
 
